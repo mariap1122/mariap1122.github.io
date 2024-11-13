@@ -1,0 +1,46 @@
+#brick {
+  width: 40px;
+  height: 20px;
+  background: #EE6B47;
+  position: relative;
+  cursor: pointer;
+}
+
+#path {
+  outline: 1px solid #E8C48E;
+  width: 540px;
+  height: 20px;
+}
+
+#container {
+width: 400px;
+height: 400px;
+position: relative;
+background: yellow;
+}
+#animate {
+width: 50px;
+height: 50px;
+position: absolute;
+background-color: red;
+}
+
+#field {
+height: 200px;
+border-bottom: 3px black groove;
+position: relative;
+}
+#ball {
+position: absolute;
+cursor: pointer;
+}
+
+textarea {
+display: block;
+border: 1px solid #BBB;
+color: #444;
+font-size: 110%;
+}
+button {
+margin-top: 10px;
+}

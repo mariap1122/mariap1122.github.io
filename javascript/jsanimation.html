@@ -1,0 +1,171 @@
+<html>
+  <head>
+  
+     <title>JavaScript Animation</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.cx/libs/animate.js"></script>
+  </head>
+
+<body>
+
+   <h2>Moving Box</h2>
+<p><button onclick="myMove()">Click Me</button></p>
+<div id ="container">
+<div id ="animate"></div>
+</div>
+<script>
+function myMove() {
+let id = null;
+const elem = document.getElementById("animate");
+let pos = 0;
+clearInterval(id);
+id = setInterval(frame, 5);
+   function frame() {
+if (pos == 350) {
+clearInterval(id);
+} else {
+pos++;
+elem.style.top = pos + "px";
+elem.style.left = pos + "px";
+   }
+ }
+} 
+</script>
+
+<br>
+   <h2>Moving Bar</h2>
+   
+ <div id="path">
+    <div id="brick"></div>
+  </div>
+
+  <script>
+    function makeEaseInOut(timing) {
+      return function(timeFraction) {
+        if (timeFraction < .5)
+          return timing(2 * timeFraction) / 2;
+        else
+          return (2 - timing(2 * (1 - timeFraction))) / 2;
+      }
+    }
+
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+
+    let bounceEaseInOut = makeEaseInOut(bounce);
+
+    brick.onclick = function() {
+      animate({
+        duration: 3000,
+        timing: bounceEaseInOut,
+        draw: function(progress) {
+          brick.style.left = progress * 500 + 'px';
+        }
+      });
+    };
+  </script>
+   
+  <br> 
+   <h2>Moving Car</h2>
+   
+         <script type = "text/javascript">
+         var imgObj = null;
+         var animate ;
+            
+         function init() {
+            imgObj = document.getElementById('myImage');
+            imgObj.style.position= 'relative'; 
+            imgObj.style.left = '0px'; 
+         }
+         function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            animate = setTimeout(moveRight,20);    // call moveRight in 20msec
+         }
+         function stop() {
+            clearTimeout(animate);
+            imgObj.style.left = '0px'; 
+         }
+         
+         window.onload = init;
+      </script>
+   </head>
+    
+      <form>
+         <img id = "myImage" src = "1.jpg" />
+         <p>Click the buttons below to handle animation</p>
+         <input type = "button" value = "Start" onclick = "moveRight();" />
+         <input type = "button" value = "Stop" onclick = "stop();" />
+      </form>      
+   
+   <br>
+   
+   
+  <h2> Moving Ball</h2>
+  
+  <div id="field">
+<img src="https://js.cx/clipart/ball.svg" width="40" height="40" id="ball">
+</div>
+<script>
+function makeEaseOut(timing) {
+return function(timeFraction) {
+return 1 - timing(1 - timeFraction);
+}
+}
+function bounce(timeFraction) {
+for (let a = 0, b = 1; 1; a += b, b /= 2) {
+if (timeFraction >= (7 - 4 * a) / 11) {
+return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+}
+}
+}
+ball.onclick = function() {
+let to = field.clientHeight - ball.clientHeight;
+animate({
+duration: 2000,
+timing: makeEaseOut(bounce),
+draw(progress) {
+ball.style.top = to * progress + 'px'
+}
+});
+};
+</script>
+
+   <h2>Draw</h2>
+     
+<textarea id="textExample" rows="5" cols="60">Γράψτε </textarea>
+<button onclick="animateText(textExample)">Τρέξε το animation</button>
+<script>
+function animateText(textArea) {
+let text = textArea.value;
+let to = text.length,
+from = 0;
+animate({
+duration: 5000,
+timing: bounce,
+draw: function(progress) {
+let result = (to - from) * progress + from;
+textArea.value = text.slice(0, Math.ceil(result))
+}
+});
+}
+function bounce(timeFraction) {
+for (let a = 0, b = 1; 1; a += b, b /= 2) {
+if (timeFraction >= (7 - 4 * a) / 11) {
+return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+}
+}
+}
+</script>
+
+   
+   
+
+</body>
+</html>

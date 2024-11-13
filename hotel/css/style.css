@@ -1,0 +1,185 @@
+	   	
+	body{font-family: Quicklime;
+        background-image: url('hotel3.jpeg');
+		background-position: center; 
+        background-repeat: no-repeat;
+		background-position:top;
+		background-color:white;
+        background-size:cover;}
+			
+	h1{
+		text-align:center;
+	   background-color: black ;
+        color: white;
+        padding: 20px;
+         font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;}
+		   
+ .banner{background-color: rgba(0, 0, 0, 0.5);
+		margin-top:-10px;
+		margin-right:-10px;
+		margin-left:-10px;}
+			
+			
+	.text1{text-align:right;
+		margin:50px 0px; padding:5px;
+		font-size:15px;
+		text-indent:10px;
+		font-family: Quicklime;
+			}
+			
+
+.info{ background-color: rgba(0, 0, 0, 0.5);
+	width:1000px;
+	border-radius:15px;
+	text-align:center;
+	margin-left:250px;
+    margin-top:150px;}
+		
+p{color:white;}
+			
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+     padding: 80px;
+     text-align:left;
+	 font-size:20px;
+}
+ 
+.container1 {
+     max-width: 1200px;
+	 margin: 0 auto;
+	 background-color: transparent;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.left-section {
+  text-align: left; 
+}
+
+.right-section {
+  text-align: right;
+}
+ 
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #DBD2DC;
+  color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+	
+	
+	
+@font-face {
+    font-family:Quicklime;
+    src: url(Quicklime-Regular.ttf);}
+	
+	
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #111;
+}		
+
+.image {     display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+ .image img {
+        max-width: 100%;
+        height: 100%;
+        object-fit:cover;
+		align:center;
+      }
+
+ .image__caption {
+        font-size: 20px;
+        color: #FFF;
+        text-align: center;
+      }
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 60%;
+		background-color: rgba(0, 0, 0, 0.5);
+		
+      }
+	  
+.contact{
+		 background-color:lightblue ;
+          width:500px;
+          align:center;
+		  margin-bottom: auto;
+          margin-left: auto;
+          margin-right: auto;
+		  margin-top:150px;
+		  text-align:center;
+		  background-color: rgba(0, 0, 0, 0.5);
+		  border-radius:15px;}
+			
+.GFG{
+		  background-color:#DBD2DC;
+		  border:1px solid black;
+		  font-size:15px;
+		  color:black;}
+		  
+
+.booking {
+          margin: 200px;
+		  margin-left:450px;
+          padding: 1px 1px;
+          border: 1px solid #666;
+          border-radius: 8px;
+          box-shadow: 0 0 10px #666;
+          padding-top: 10px;
+		  background-color: rgba(0, 0, 0, 0.5);
+		  width:600px;
+        }
+	   
+ .book{text-align:center;}
